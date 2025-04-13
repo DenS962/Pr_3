@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pz3._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Артамонов Денис");
+            int number;
+            int positiveCount = 0;
+            int negativeCount = 0;
+            int sum = 0;
+
+            do
+            {
+                Console.Write("Введіть число (0 для завершення): ");
+                number = int.Parse(Console.ReadLine());
+
+                if (number > 0)
+                {
+                    positiveCount++;
+                    sum += number;
+                }
+                else if (number < 0)
+                {
+                    negativeCount++;
+                    sum += number;
+                }
+
+            } while (number != 0);
+
+            Console.WriteLine("\nРезультати:");
+            Console.WriteLine("Сума введених чисел: " + sum);
+            Console.WriteLine("Кількість додатних чисел: " + positiveCount);
+            Console.WriteLine("Кількість від’ємних чисел: " + negativeCount);
+        }
+    }
+}

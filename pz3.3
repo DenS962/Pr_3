@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pz3._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Артамонов Денис");
+            Console.Write("Введіть дійсне число x: ");
+            double x = double.Parse(Console.ReadLine());
+
+            Console.Write("Введіть ціле додатне число k: ");
+            int k = int.Parse(Console.ReadLine());
+
+            double result = 1;
+
+            for (int i = 1; i <= k; i++)
+            {
+                result *= x;
+            }
+
+            Console.WriteLine($"{x}^{k} = {result}");
+        }
+    }
+}

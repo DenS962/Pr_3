@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pz3._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Артамонов Денис");
+            Console.WriteLine(" x\t|\ty");
+            Console.WriteLine("---------------");
+
+            for (double x = -4; x <= 4; x += 0.5)
+            {
+                double y = Math.Abs(x - 2) + Math.Abs(x + 1);
+                Console.WriteLine($"{x:F1}\t|\t{y:F2}");
+            }
+        }
+    }
+}

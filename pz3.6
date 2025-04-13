@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pz3._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                Console.WriteLine("Артамонов Денис");
+                Console.Write("Введіть цiле число A: ");
+                int A = int.Parse(Console.ReadLine());
+
+                Console.Write("Введіть цiле число B: ");
+                int B = int.Parse(Console.ReadLine());
+
+                int count = 0;
+
+                Console.WriteLine("\nЧисла мiж A i B у порядку спадання:");
+
+                if (A < B)
+                {
+                    for (int i = B - 1; i > A; i--)
+                    {
+                        Console.Write(i + " ");
+                        count++;
+                    }
+                }
+                else if (A > B)
+                {
+                    for (int i = A - 1; i > B; i--)
+                    {
+                        Console.Write(i + " ");
+                        count++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Числа A i B рівні — немає чисел між ними.");
+                }
+
+                Console.WriteLine("\nКількість чисел між A i B: " + count);
+            }
+        }
+
+    }
+}
